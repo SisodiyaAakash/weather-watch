@@ -1,0 +1,91 @@
+body {
+  #root {
+    min-height: 100vh;
+    @include flex-column;
+  }
+  .weather-app {
+    background-color: $weather-secondary-dark;
+    flex-grow: 1;
+
+    .weather-info-wrap {
+      .info-inner-wrap {
+        .weather-info-head {
+          @include flex-column;
+          align-items: center;
+          gap: 15px;
+          margin-bottom: 35px;
+
+          justify-content: center;
+          text-align: center;
+
+          .temperature-toggler {
+            @include flex-center;
+            justify-content: center;
+
+            input[type='radio'] {
+              display: none;
+            }
+
+            label {
+              padding: 15px 20px;
+            }
+          }
+
+          // .temperature-toggler {
+          //   position: relative;
+          //   display: inline-block;
+
+          //   input[type="radio"] {
+          //     display: none;
+          //   }
+
+          //   label {
+          //     cursor: pointer;
+          //     padding: 10px;
+          //     display: inline-block;
+          //   }
+          // }
+
+          // .temp-toggler-slider {
+          //   position: absolute;
+          //   top: 0;
+          //   left: 0;
+          //   height: 100%;
+          //   width: 50%;
+          //   background-color: #2196f3;
+          //   transition: 0.4s;
+          //   border-radius: 25px;
+            
+          //   &:before {
+          //     position: absolute;
+          //     content: "";
+          //     height: 26px;
+          //     width: 26px;
+          //     left: 2px;
+          //     bottom: 2px;
+          //     background-color: white;
+          //     transition: 0.4s;
+          //     border-radius: 50%;
+          //   }
+          // }
+
+          // input[type="radio"]#celsius:checked ~ .temp-toggler-slider {
+          //   transform: translateX(100%);
+          // }
+
+          // input[type="radio"]#celsius:checked ~ .temp-toggler-slider:before {
+          //   transform: translateX(22px);
+          // }
+
+          // input[type="radio"]#fahrenheit:checked ~ .temp-toggler-slider {
+          //   transform: translateX(0%);
+          // }
+
+          // input[type="radio"]#fahrenheit:checked ~ .temp-toggler-slider:before {
+          //   transform: translateX(0px);
+          // }
+        }
+      }
+    }
+  }
+}

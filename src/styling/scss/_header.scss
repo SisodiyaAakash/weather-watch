@@ -1,0 +1,35 @@
+body {
+  header.header {
+    position: sticky;
+    top: 0;
+    background-color: $weather-secondary-dark;
+    padding: 20px 0 30px;
+
+    @media screen and (max-width: 767px) {
+      padding: 10px 0 20px;
+    }
+
+    .header-inner-wrap {
+      .app-heading {
+        @include flex-center;
+        justify-content: center;
+        gap: 8px;
+
+        .logo {
+          height: 55px;
+          width: auto;
+        }
+        .logo-label {
+          @include flex-column;
+          align-items: flex-start;
+          line-height: 0.9;
+
+          // Update the typography with Body Text
+          @extend p;
+          line-height: 1;
+          color: $white;
+        }
+      }
+    }
+  }
+}

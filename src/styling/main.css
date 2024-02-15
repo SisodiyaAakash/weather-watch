@@ -1,0 +1,496 @@
+/* Colours */
+/* Font Weight */
+/* Utilities */
+/* Starter Theme Variables */
+/* Theme colors */
+/* Fonts */
+/* Common Utilities */
+/* Flex */
+/* Text ellipse */
+/* Fonts */
+/* Primary Fonts */
+@font-face {
+  font-family: "Questrial";
+  src: url("../assets/fonts/Questrial-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* Secondary Fonts */
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+/* Typography Styling */
+body {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-family: "Questrial";
+  font-weight: 400;
+  color: #FFFFFF;
+}
+body h1 *,
+body h2 *,
+body h3 *,
+body h4 *,
+body h5 *,
+body h6 * {
+  font-family: inherit;
+  font-weight: inherit;
+}
+body p, body header.header .header-inner-wrap .app-heading .logo-label,
+body ul li,
+body input,
+body textarea,
+body select option {
+  font-family: "Inter";
+  font-weight: 400;
+}
+body button {
+  font-family: "Inter";
+  text-decoration: none;
+  font-weight: 400;
+  cursor: pointer;
+}
+body button * {
+  font-family: inherit;
+  font-weight: inherit;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body p,
+body header.header .header-inner-wrap .app-heading .logo-label {
+  padding: 0;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body a,
+body p,
+body header.header .header-inner-wrap .app-heading .logo-label,
+body button {
+  margin: 0;
+  font-style: normal;
+}
+body a {
+  text-decoration: none;
+  cursor: pointer;
+}
+body a:hover {
+  text-decoration: none;
+}
+body h1 {
+  font-size: 56px;
+  line-height: 63px;
+  letter-spacing: 0.56px;
+}
+@media screen and (max-width: 767px) {
+  body h1 {
+    font-size: 48px;
+    line-height: 54px;
+    letter-spacing: 0.48px;
+  }
+}
+body h2 {
+  font-size: 48px;
+  line-height: 54px;
+  letter-spacing: 0.48px;
+}
+@media screen and (max-width: 767px) {
+  body h2 {
+    font-size: 35px;
+    line-height: 40px;
+    letter-spacing: 0.35px;
+  }
+}
+body h3 {
+  font-size: 35px;
+  line-height: 40px;
+  letter-spacing: 0.35px;
+}
+@media screen and (max-width: 767px) {
+  body h3 {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 0.32px;
+  }
+}
+body h4 {
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 0.32px;
+}
+@media screen and (max-width: 767px) {
+  body h4 {
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: 0.24px;
+  }
+}
+body h5 {
+  font-size: 24px;
+  line-height: 27px;
+  letter-spacing: 0.24px;
+}
+@media screen and (max-width: 767px) {
+  body h5 {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+}
+body h6 {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+@media screen and (max-width: 767px) {
+  body h6 {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.15px;
+  }
+}
+body p, body header.header .header-inner-wrap .app-heading .logo-label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (max-width: 767px) {
+  body p, body header.header .header-inner-wrap .app-heading .logo-label {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+body li {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+@media screen and (max-width: 767px) {
+  body li {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+body input,
+body textarea,
+body select option {
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Inter";
+  outline: none;
+}
+@media screen and (max-width: 543px) {
+  body input,
+  body textarea,
+  body select option {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+body button {
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+  font-weight: 700;
+  font-family: "Inter";
+}
+
+html,
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0C0921;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+body ol,
+body ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+body ol::before, body ol::after,
+body ul::before,
+body ul::after {
+  display: none;
+}
+body .container {
+  max-width: 1199px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 1199px) {
+  body .container {
+    max-width: 901px;
+  }
+}
+@media screen and (max-width: 991px) {
+  body .container {
+    max-width: 707px;
+  }
+}
+@media screen and (max-width: 767px) {
+  body .container {
+    max-width: 503px;
+  }
+}
+@media screen and (max-width: 543px) {
+  body .container {
+    max-width: 100%;
+  }
+}
+body .safe-area {
+  width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+/* Custom Scrollbar */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+*::-webkit-scrollbar-track {
+  background: #8774F8;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(67, 51, 255, 0.6);
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(67, 51, 255, 0.85);
+}
+
+/* Font weights */
+body .extra-light {
+  font-weight: 200;
+}
+body .light {
+  font-weight: 300;
+}
+body .regular {
+  font-weight: 400;
+}
+body .medium {
+  font-weight: 500;
+}
+body .semi-bold {
+  font-weight: 600;
+}
+body .bold {
+  font-weight: 700;
+}
+
+/* Typography */
+body .text-center {
+  text-align: center;
+}
+
+body form.form-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1.5px solid #8774F8;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 767px) {
+  body form.form-wrap {
+    margin-bottom: 30px;
+  }
+}
+body form.form-wrap input,
+body form.form-wrap select {
+  height: 45px;
+}
+@media screen and (max-width: 767px) {
+  body form.form-wrap input,
+  body form.form-wrap select {
+    height: 40px;
+  }
+}
+body form.form-wrap input,
+body form.form-wrap select,
+body form.form-wrap textarea {
+  padding: 0 22px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  transition: 350ms all ease;
+  background-color: transparent;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 767px) {
+  body form.form-wrap input,
+  body form.form-wrap select,
+  body form.form-wrap textarea {
+    padding: 0 20px;
+  }
+}
+body form.form-wrap input:hover, body form.form-wrap input:focus, body form.form-wrap input:focus-visible, body form.form-wrap input:visited,
+body form.form-wrap select:hover,
+body form.form-wrap select:focus,
+body form.form-wrap select:focus-visible,
+body form.form-wrap select:visited,
+body form.form-wrap textarea:hover,
+body form.form-wrap textarea:focus,
+body form.form-wrap textarea:focus-visible,
+body form.form-wrap textarea:visited {
+  outline: none;
+  transition: 350ms all ease;
+}
+body form.form-wrap input::-moz-placeholder, body form.form-wrap select::-moz-placeholder, body form.form-wrap textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+body form.form-wrap input::placeholder,
+body form.form-wrap select::placeholder,
+body form.form-wrap textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+body form.form-wrap select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding-right: 45px;
+  background-image: url("../assets/media/icons/expand-more.svg");
+  background-repeat: no-repeat;
+  background-position: right 22px center;
+}
+@media screen and (max-width: 767px) {
+  body form.form-wrap select {
+    background-position: right 20px center;
+  }
+}
+body form.form-wrap button {
+  padding: 12px 16px;
+  border: none;
+  transition: 350ms all ease;
+  cursor: pointer;
+  background-color: #8774F8;
+}
+body form.form-wrap button:hover {
+  transition: 350ms all ease;
+}
+
+body header.header {
+  position: sticky;
+  top: 0;
+  background-color: #0C0921;
+  padding: 20px 0 30px;
+}
+@media screen and (max-width: 767px) {
+  body header.header {
+    padding: 10px 0 20px;
+  }
+}
+body header.header .header-inner-wrap .app-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+body header.header .header-inner-wrap .app-heading .logo {
+  height: 55px;
+  width: auto;
+}
+body header.header .header-inner-wrap .app-heading .logo-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 0.9;
+  line-height: 1;
+  color: #FFFFFF;
+}
+
+body #root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+body .weather-app {
+  background-color: #0C0921;
+  flex-grow: 1;
+}
+body .weather-app .weather-info-wrap .info-inner-wrap .weather-info-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 35px;
+  justify-content: center;
+  text-align: center;
+}
+body .weather-app .weather-info-wrap .info-inner-wrap .weather-info-head .temperature-toggler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .weather-app .weather-info-wrap .info-inner-wrap .weather-info-head .temperature-toggler input[type=radio] {
+  display: none;
+}
+body .weather-app .weather-info-wrap .info-inner-wrap .weather-info-head .temperature-toggler label {
+  padding: 15px 20px;
+}
+
+body footer.footer {
+  margin-top: auto;
+  padding: 10px 0;
+}
+body footer.footer .footer-inner-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 15px;
+}
+body footer.footer .footer-inner-wrap .social-icon {
+  display: flex;
+  align-items: center;
+}
+body footer.footer .footer-inner-wrap .social-icon img {
+  width: auto;
+  height: 20px;
+}/*# sourceMappingURL=main.css.map */

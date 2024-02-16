@@ -67,6 +67,7 @@ body {
 
           h3 {
             transition: $transition-slow;
+            text-transform: capitalize;
           }
 
           .temperature-toggler {

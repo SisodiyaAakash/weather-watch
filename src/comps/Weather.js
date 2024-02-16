@@ -5,7 +5,7 @@ import axios from 'axios';
 const WeatherApp = () => {
   const [city, setCity] = useState('');
   const [weatherData, setWeatherData] = useState(null);
-  const [isFahrenheit, setIsFahrenheit] = useState(true);
+  const [isFahrenheit, setIsFahrenheit] = useState(false);
   const [scrollClass, setScrollClass] = useState('');
   const [userInputChanged, setUserInputChanged] = useState(false);
 
@@ -26,6 +26,14 @@ const WeatherApp = () => {
       setScrollClass('scrolled');
     } else {
       setScrollClass('');
+    }
+  };
+
+  const handleCityClick = () => {
+    // Focus on the input field when the city name is clicked
+    const inputField = document.getElementById('cityInput');
+    if (inputField) {
+      inputField.focus();
     }
   };
 
@@ -109,6 +117,7 @@ const WeatherApp = () => {
             <input
               type="text"
               value={city}
+              id='cityInput'
               onChange={handleChange}
               placeholder="Enter your city name"
             />
@@ -120,19 +129,9 @@ const WeatherApp = () => {
             {weatherData ? (
               <div className='info-inner-wrap'>
                 <div className={`weather-info-head ${scrollClass}`}>
-                  <h3>{city}</h3>
+                  <h3 onClick={handleCityClick}>{city}</h3>
 
                   <div className="temperature-toggler">
-                    <input
-                      type="radio"
-                      id="fahrenheit"
-                      name="temperatureUnit"
-                      value="fahrenheit"
-                      checked={isFahrenheit}
-                      onChange={() => setIsFahrenheit(true)}
-                    />
-                    <label htmlFor="fahrenheit" className={isFahrenheit ? "active" : ""}>F<span>ahrenheit</span></label>
-
                     <input
                       type="radio"
                       id="celsius"
@@ -142,6 +141,16 @@ const WeatherApp = () => {
                       onChange={() => setIsFahrenheit(false)}
                     />
                     <label htmlFor="celsius" className={!isFahrenheit ? "active" : ""}>C<span>elsius</span></label>
+                    
+                    <input
+                      type="radio"
+                      id="fahrenheit"
+                      name="temperatureUnit"
+                      value="fahrenheit"
+                      checked={isFahrenheit}
+                      onChange={() => setIsFahrenheit(true)}
+                    />
+                    <label htmlFor="fahrenheit" className={isFahrenheit ? "active" : ""}>F<span>ahrenheit</span></label>
                   </div>
                 </div>
                 <div className='date-based-list'>

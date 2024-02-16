@@ -531,6 +531,7 @@ body .weather-app .weather-info-wrap .info-inner-wrap .weather-info-head.scrolle
 body .weather-app .weather-info-wrap .info-inner-wrap .weather-info-head h3 {
   transition: 750ms all ease;
   text-transform: capitalize;
+  cursor: pointer;
 }
 body .weather-app .weather-info-wrap .info-inner-wrap .weather-info-head .temperature-toggler {
   display: flex;

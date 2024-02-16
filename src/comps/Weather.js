@@ -7,6 +7,7 @@ const WeatherApp = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [isFahrenheit, setIsFahrenheit] = useState(true);
   const [scrollClass, setScrollClass] = useState('');
+  const [userInputChanged, setUserInputChanged] = useState(false);
 
   const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 
@@ -39,11 +40,11 @@ const WeatherApp = () => {
   }, [city]);
 
   const handleChange = (e) => {
-    // Clear weather data when the city name changes
     setWeatherData(null);
     setCity(e.target.value);
+    setUserInputChanged(true); // Update user input change status
   };
-  
+
 
   const handleGetCurrentLocation = () => {
     if (navigator.geolocation) {
@@ -173,7 +174,7 @@ const WeatherApp = () => {
               </div>
             ) : (
               <div className='info-inner-wrap text-center'>
-                <h4>Check weather now</h4>
+                <h4>{userInputChanged ? 'No Data Found' : 'Check weather now'}</h4>
               </div>
             )}
           </div>

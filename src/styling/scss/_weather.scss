@@ -69,6 +69,30 @@ body {
             transition: $transition-slow;
             text-transform: capitalize;
             cursor: pointer;
+            transition: $transition;
+            position: relative;
+
+            &::after {
+              content: "";
+              width: 0;
+              height: 2px;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              background-color: $weather-secondary;
+              transition: $transition;
+            }
+
+            &:hover {
+              color: $weather-secondary;
+              transition: $transition;
+
+              &::after {
+                transition: $transition;
+                width: 100%;
+                right: 0;
+              }
+            }
           }
 
           .temperature-toggler {

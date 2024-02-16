@@ -532,6 +532,27 @@ body .weather-app .weather-info-wrap .info-inner-wrap .weather-info-head h3 {
   transition: 750ms all ease;
   text-transform: capitalize;
   cursor: pointer;
+  transition: 550ms all ease;
+  position: relative;
+}
+body .weather-app .weather-info-wrap .info-inner-wrap .weather-info-head h3::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #8774F8;
+  transition: 550ms all ease;
+}
+body .weather-app .weather-info-wrap .info-inner-wrap .weather-info-head h3:hover {
+  color: #8774F8;
+  transition: 550ms all ease;
+}
+body .weather-app .weather-info-wrap .info-inner-wrap .weather-info-head h3:hover::after {
+  transition: 550ms all ease;
+  width: 100%;
+  right: 0;
 }
 body .weather-app .weather-info-wrap .info-inner-wrap .weather-info-head .temperature-toggler {
   display: flex;

@@ -45,6 +45,15 @@ const WeatherApp = () => {
     setUserInputChanged(true); // Update user input change status
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Prevent default form submission behavior
+    // Fetch weather data when form is submitted
+    if (city) {
+      fetchWeatherData(city);
+    }
+  };
+
 
   const handleGetCurrentLocation = () => {
     if (navigator.geolocation) {
@@ -93,7 +102,10 @@ const WeatherApp = () => {
     <div className="weather-app">
       <div className='container'>
         <div className='safe-area'>
-          <form className='form-wrap'>
+          <form
+            className='form-wrap'
+            onSubmit={handleSubmit}
+          >
             <input
               type="text"
               value={city}

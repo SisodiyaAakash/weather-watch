@@ -39,8 +39,11 @@ const WeatherApp = () => {
   }, [city]);
 
   const handleChange = (e) => {
+    // Clear weather data when the city name changes
+    setWeatherData(null);
     setCity(e.target.value);
   };
+  
 
   const handleGetCurrentLocation = () => {
     if (navigator.geolocation) {

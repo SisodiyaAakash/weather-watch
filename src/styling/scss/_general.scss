@@ -43,8 +43,7 @@ body {
   }
 
   .safe-area {
-    @include auto-margin-side-width(550px);
-    max-width: 100%;
+    @include auto-margin-side-width(850px, 550px, 400px);
   }
 }
 

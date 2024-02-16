@@ -22,7 +22,9 @@ $extra-bold: 800;
 $black-weight: 900;
 
 /* Utilities */
-$transition: 350ms all ease;
+$transition-fast: 350ms all ease;
+$transition: 550ms all ease;
+$transition-slow: 750ms all ease;
 
 
 /* Starter Theme Variables */
@@ -31,6 +33,19 @@ $weather-primary: $blue;
 $weather-primary-dark: $dark-blue; 
 $weather-secondary: $purple;
 $weather-secondary-dark: $blueish-purple;
+
+/* Theme borders */
+$weather-primary-border: 1.5px solid $weather-primary;
+$weather-primary-dark-border: 1.5px solid $weather-primary-dark;
+$weather-secondary-border: 1.5px solid $weather-secondary;
+$weather-secondary-dark-border: 1.5px solid $weather-secondary-dark;
+
+/* border radius */
+$weather-primary-radius: 5px;
+$weather-sharp-radius: 100px;
+
+/* Box Shadow */
+$weather-primary-box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
 
 /* Fonts */
 $weather-primary-fonts: 'Questrial';

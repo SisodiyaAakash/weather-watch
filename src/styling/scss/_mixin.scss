@@ -54,16 +54,33 @@
   justify-content: center;
 }
 
+/* Grid */
+@mixin grid-layout($columns, $gap, $minWidth, $maxWidth) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+  grid-auto-rows: minmax($minWidth, $maxWidth);
+}
 
-// Side margin auto
+
+/* Side margin auto */
 @mixin auto-margin-side {
   margin-left: auto;
   margin-right: auto;
 }
-@mixin auto-margin-side-width ($width) {
+@mixin auto-margin-side-width ($width, $widthTab, $widthMob) {
   width: $width;
   margin-left: auto;
   margin-right: auto;
+  max-width: 100%;
+  
+  @media screen and (max-width: 991px) {
+    width: $widthTab;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: $widthMob;
+  }
 }
 
 /* Text ellipse */

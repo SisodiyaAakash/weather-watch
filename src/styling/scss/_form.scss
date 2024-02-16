@@ -1,10 +1,15 @@
 body {
   form.form-wrap {
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    max-width: 100%;
+
     @include flex-center;
     justify-content: space-between;
-    border: 1.5px solid $weather-secondary;
-    border-radius: 5px;
-    margin-bottom: 50px;
+    border: $weather-secondary-border;
+    border-radius: $weather-primary-radius;
 
     @media screen and (max-width: 767px) {
       margin-bottom: 30px;
@@ -13,6 +18,7 @@ body {
     input,
     select {
       height: 45px;
+      max-width: calc(100% - 50px);
 
       @media screen and (max-width: 767px) {
         height: 40px;
@@ -23,7 +29,7 @@ body {
     textarea {
       padding: 0 22px;
       outline: none;
-      border-radius: 5px;
+      border-radius: $weather-primary-radius;
       border: none;
       transition: $transition;
       background-color: transparent;
@@ -64,6 +70,10 @@ body {
       transition: $transition;
       cursor: pointer;
       background-color: $weather-secondary;
+
+      @media screen and (max-width: 767px) {
+        padding: 10px 12px;
+      }
 
       &:hover {
         transition: $transition;

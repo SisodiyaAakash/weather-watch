@@ -6,84 +6,189 @@ body {
   .weather-app {
     background-color: $weather-secondary-dark;
     flex-grow: 1;
+    padding: 15px 0 35px;
 
     .weather-info-wrap {
       .info-inner-wrap {
         .weather-info-head {
           @include flex-column;
           align-items: center;
-          gap: 15px;
-          margin-bottom: 35px;
-
           justify-content: center;
+          gap: 30px;
+
+          background-color: $weather-secondary-dark;
+
+          transition: $transition;
           text-align: center;
+
+          margin: 0 -10px 50px;
+          width: calc(100% + 20px);
+
+          @media screen and (max-width: 767px) {
+            margin: 0 -10px 30px;
+          }
+
+          &.scrolled {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            padding: 20px 10px;
+
+            position: sticky;
+            top: 90px;
+            transition: $transition;
+
+            @media screen and (max-width: 767px) {
+              padding: 15px 10px;
+              top: 80px;
+              gap: 20px;
+              margin-bottom: 35px;
+            }
+
+            h3 {
+              @extend h5;
+              transition: $transition;
+            }
+
+            .temperature-toggler {
+              label {
+                span {
+                  width: 0;
+                  font-size: 0;
+                  line-height: 0;
+                  opacity: 0;
+                  visibility: hidden;
+                  transition: $transition-slow;
+                }
+              }
+            }
+          }
+
+          h3 {
+            transition: $transition-slow;
+          }
 
           .temperature-toggler {
             @include flex-center;
             justify-content: center;
+            border: $weather-secondary-border;
+            border-radius: $weather-sharp-radius;
+            padding: 4px;
 
-            input[type='radio'] {
+            input[type="radio"] {
               display: none;
             }
 
             label {
-              padding: 15px 20px;
+              border: none;
+              border-radius: $weather-sharp-radius;
+              padding: 8px 16px;
+              color: $white;
+              cursor: pointer;
+
+              font-size: 14px;
+              line-height: 1;
+
+              transition: $transition;
+
+              @media screen and (max-width: 767px) {
+                font-size: 12px;
+                padding: 6px 12px;
+              }
+
+              &.active {
+                background-color: $weather-secondary;
+                transition: $transition-slow;
+              }
+
+              span {
+                transition: $transition;
+              }
             }
           }
+        }
 
-          // .temperature-toggler {
-          //   position: relative;
-          //   display: inline-block;
+        .date-based-list {
+          @include flex-column;
+          gap: 50px;
 
-          //   input[type="radio"] {
-          //     display: none;
-          //   }
+          @media screen and (max-width: 767px) {
+            gap: 30px;
+          }
 
-          //   label {
-          //     cursor: pointer;
-          //     padding: 10px;
-          //     display: inline-block;
-          //   }
-          // }
+          .date-list-itm {
+            .date-heading {
+              margin-bottom: 10px;
+            }
 
-          // .temp-toggler-slider {
-          //   position: absolute;
-          //   top: 0;
-          //   left: 0;
-          //   height: 100%;
-          //   width: 50%;
-          //   background-color: #2196f3;
-          //   transition: 0.4s;
-          //   border-radius: 25px;
-            
-          //   &:before {
-          //     position: absolute;
-          //     content: "";
-          //     height: 26px;
-          //     width: 26px;
-          //     left: 2px;
-          //     bottom: 2px;
-          //     background-color: white;
-          //     transition: 0.4s;
-          //     border-radius: 50%;
-          //   }
-          // }
+            .weather-card-grid {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              gap: 25px;
 
-          // input[type="radio"]#celsius:checked ~ .temp-toggler-slider {
-          //   transform: translateX(100%);
-          // }
+              @media screen and (max-width: 991px) {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+              }
+              @media screen and (max-width: 767px) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+              }
+              @media screen and (max-width: 310px) {
+                grid-template-columns: repeat(1, 1fr);
+              }
 
-          // input[type="radio"]#celsius:checked ~ .temp-toggler-slider:before {
-          //   transform: translateX(22px);
-          // }
+              .weather-card {
+                padding: 20px 10px 10px;
+                border-radius: $weather-primary-radius;
+                border: $weather-secondary-border;
 
-          // input[type="radio"]#fahrenheit:checked ~ .temp-toggler-slider {
-          //   transform: translateX(0%);
-          // }
+                @include flex-column;
+                align-items: center;
+                transition: $transition;
 
-          // input[type="radio"]#fahrenheit:checked ~ .temp-toggler-slider:before {
-          //   transform: translateX(0px);
-          // }
+                &:hover {
+                  transition: $transition;
+                  box-shadow: $weather-primary-box-shadow;
+                  cursor: default;
+                }
+
+                .date-temp {
+                  @include flex-center;
+                  justify-content: space-between;
+                  column-gap: 20px;
+                  row-gap: 10px;
+                  margin-bottom: 25px;
+
+                  @media screen and (max-width: 767px) {
+                    flex-direction: column;
+                    margin-bottom: 35px;
+                  }
+
+                  h6 {
+                    font-size: 16px;
+
+                    @media screen and (max-width: 767px) {
+                      font-size: 18px;
+                    }
+
+                    &.date {
+                      color: rgba($white, 0.3);
+                    }
+                    &.temp {
+                      color: rgba($white, 0.8);
+                    }
+                  }
+                }
+
+                .desc {
+                  text-transform: capitalize;
+                  text-align: center;
+                }
+              }
+            }
+          }
         }
       }
     }
